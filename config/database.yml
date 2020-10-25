@@ -83,3 +83,6 @@ production:
   database: FocusON_production
   username: FocusON
   password: <%= ENV['FOCUSON_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

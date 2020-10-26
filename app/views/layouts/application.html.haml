@@ -10,19 +10,6 @@
 
     = stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %header.header
-      %nav.nav
-        %ul.header_menu
-          %li.nav-link 〇〇さん
-          %li.header_menu_title
-            = link_to "FocusON", root_path, class: "nav-link"
-          %li
-            %ul.header_menu_inner
-              %li
-                = link_to "#", class: "nav-link" do
-                  %span.mr-1 リストを作成
-                  = icon('fas', 'edit')
-                  -# %i.fas.fa-edit
-              %li
-                = link_to "サインアウト", "#", class: "nav-link"
+    = render 'partial/header'
+    
     = yield

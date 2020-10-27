@@ -12,4 +12,4 @@
               = icon('fas', 'edit')
               -# %i.fas.fa-edit
           %li
-            = link_to "サインアウト", "#", class: "nav-link"
+            = link_to "サインアウト", destroy_user_session_path, method: :delete, class: "nav-link"

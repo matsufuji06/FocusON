@@ -1,7 +1,8 @@
 %header.header
   %nav.nav
     %ul.header_menu
-      %li.nav-link 〇〇さん
+      %li.nav-link
+        = "#{current_user.name} さん"
       %li.header_menu_title
         = link_to "FocusON", root_path, class: "nav-link"
       %li

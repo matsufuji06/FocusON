@@ -1,0 +1,14 @@
+%header.header
+  %nav.nav
+    %ul.header_menu
+      %li.nav-link
+        = "#{current_user.name} さん"
+      %li.header_menu_title
+        = link_to "FocusON", root_path, class: "nav-link"
+      %li
+        %ul.header_menu_inner
+          %li
+            = link_to "#", class: "nav-link" do
+              %span.mr-1 リストを作成
+          %li
+            = link_to "サインアウト", destroy_user_session_path, method: :delete, class: "nav-link"

@@ -24,6 +24,11 @@ class ListsController < ApplicationController
       render action: :edit
     end
   end
+  
+  def destroy
+    @list = List.find(params[:id])
+    redirect_to :root if @list.destroy
+  end
 
   private
     def list_params

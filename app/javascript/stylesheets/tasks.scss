@@ -28,6 +28,12 @@
 
         &_action {
           font-size: 14px;
+          .delete_link{
+            margin-right: 10px;
+          }
+          .edit_link{
+
+          }
         }
       }
     }

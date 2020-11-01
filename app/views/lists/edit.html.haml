@@ -1,0 +1,8 @@
+.listeditPage
+  .container
+    = form_with model: @list, url: { action: :update }, html: { class: 'listForm' }, local: true do |f|
+      - if @list.errors.any?
+        %p.text-danger タイトルは1～255文字以内で入力してください
+      = f.label :title
+      = f.text_field :title, class: "form-control listName", placeholder: "リスト名"
+      .text-center= f.submit "編集する", class: "submitBtn"

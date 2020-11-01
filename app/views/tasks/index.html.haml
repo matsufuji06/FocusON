@@ -4,3 +4,5 @@
       .list
         .list_header
           %h2.list_header_title= list.title
+          .list_header_action
+            = link_to "編集", edit_list_path(list)

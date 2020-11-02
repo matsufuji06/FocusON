@@ -1,0 +1,12 @@
+.carddetailPage
+  .container
+    .cardContents
+      .cardContents_title
+        %div タイトル
+        %h2= @card.title
+      .cardContents_memo
+        %div メモ
+        %div= @card.memo
+      .cardContents_listStatus
+        %div リスト名
+        %div= @card.list.title

@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   def new
-    @list = List.find(params[:id])
+    @list = List.find_by(id: params[:list_id])
     @card = Card.new
   end
 

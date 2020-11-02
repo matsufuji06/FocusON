@@ -8,5 +8,12 @@
             = link_to "削除", list_path(list), method: :delete, class: "delete_link", data: { confirm: "#{list.title}を削除して大丈夫ですか？" }
             = link_to "編集", edit_list_path(list), class: "edit_link"
         .cardWrapper
+          - list.cards.each do |card|
+            .card
+              %h3.card_title
+                = card.title
+              - if card.memo.size > 0
+                %div{class: "card_detail is-exist"}
+                  %i{class: "fas fa-bars"}
           .addCard
             = link_to "さらにカードを追加", new_list_card_path(list.id), class: "addCard_link"

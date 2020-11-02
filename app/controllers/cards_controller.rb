@@ -12,6 +12,13 @@ class CardsController < ApplicationController
       render action: :new
     end
   end
+
+  def edit
+    @card = Card.find_by(id: params[:id])
+  end
+
+  def update
+  end
   
   def show
     @card = Card.find_by(id: params[:id])

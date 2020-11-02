@@ -3,7 +3,7 @@ class CardsController < ApplicationController
     @list = List.find_by(id: params[:list_id])
     @card = Card.new
   end
-
+  
   def create
     @card = Card.new(card_params)
     if @card.save
@@ -12,7 +12,11 @@ class CardsController < ApplicationController
       render action: :new
     end
   end
-
+  
+  def show
+    @list = List.find_by(id: params[:list_id])
+  end
+  
   private
   def card_params
     params.require(:card).permit(:title, :memo, :list_id)

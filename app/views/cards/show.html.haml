@@ -10,3 +10,5 @@
       .cardContents_listStatus
         %div リスト名
         %div= @card.list.title
+      .cardContents_btnArea
+        = link_to '編集する', edit_list_card_path(@card.list, @card), class: "edit_btn"

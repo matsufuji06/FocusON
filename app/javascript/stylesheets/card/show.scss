@@ -11,7 +11,7 @@
       border-bottom: 1px solid #ccc;
       margin-bottom: 30px;
     }
-    
+
     &_btnArea {
       margin-top: 40px;
       text-align: center;
@@ -29,6 +29,9 @@
           &:hover {
             opacity: .7;
           }
+        }
+        &.delete_btn {
+          margin-top: 20px;
         }
       }
     }

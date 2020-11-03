@@ -9,4 +9,7 @@
       .cardeditForm_memo
         = f.label :memo
         = f.text_area :memo, class: "form-control", placeholder: "詳細"
+      .cardeditForm_memo
+        %label リスト名
+        = select :card, :list_id, @lists.map{ |list| [list.title, list.id] }, {}, { class: 'form-control' }
       .text-center= f.submit "更新する", class: "submitBtn"

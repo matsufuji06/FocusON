@@ -1,0 +1,15 @@
+.cardeditPgae
+  .container
+    = form_with model: @card, url: { action: :update }, html: { class: 'cardeditForm' }, local: true do |f|
+      - if @card.errors.any?
+        %p.text-danger タイトルは1～255文字以内で入力してください
+      .cardeditForm_title
+        = f.label :title
+        = f.text_field :title, class: "form-control", placeholder: "カード名"
+      .cardeditForm_memo
+        = f.label :memo
+        = f.text_area :memo, class: "form-control", placeholder: "詳細"
+      .cardeditForm_memo
+        %label リスト名
+        = select :card, :list_id, @lists.map{ |list| [list.title, list.id] }, {}, { class: 'form-control' }
+      .text-center= f.submit "更新する", class: "submitBtn"

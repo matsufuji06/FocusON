@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  before_action :set_card, only:[:edit, :update, :show]
+  before_action :set_card, only:[:edit, :update, :show, :destroy]
 
   def new
     @list = List.find_by(id: params[:list_id])
@@ -27,6 +27,11 @@ class CardsController < ApplicationController
   end
   
   def show
+  end
+
+  def destroy
+    @card.destroy
+    redirect_to :root
   end
   
   private

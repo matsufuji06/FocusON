@@ -2,8 +2,8 @@ import 'bootstrap';
 import '../stylesheets/application';
 import '@fortawesome/fontawesome-free/js/all';
 
-import bar from "./timer";
-bar();
+import timer from "./timer";
+timer();
 
 
 // This file is automatically compiled by Webpack, along with any other files
